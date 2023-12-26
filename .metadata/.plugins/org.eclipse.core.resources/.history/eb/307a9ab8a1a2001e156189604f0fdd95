@@ -1,0 +1,84 @@
+package eventos;
+
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
+
+import javax.swing.JFrame;
+
+public class EventMouse {
+
+	public static void main(String[] args) {
+
+		MyFrameEventMouse myFrame = new MyFrameEventMouse();
+
+		myFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
+	}
+
+}
+
+class MyFrameEventMouse extends JFrame {
+	public MyFrameEventMouse() {
+		setTitle("Botones y eventos");
+		setBounds(400, 200, 500, 300);
+
+		EventMouses myMouse = new EventMouses();
+		addMouseListener(myMouse );
+		
+		setVisible(true);
+	}
+}
+
+class EventMouses implements MouseListener, MouseMotionListener {
+	
+	private int count;
+
+	@Override
+	public void mouseClicked(MouseEvent arg0) {
+		System.out.println("mouseClicked");
+		this.count++;
+		System.out.println(this.count);
+		
+	}
+
+	@Override
+	public void mouseEntered(MouseEvent arg0) {
+		System.out.println("mouseEntered");
+		System.out.println(arg0.getX());
+				
+	}
+
+	@Override
+	public void mouseExited(MouseEvent arg0) {
+		System.out.println("mouseExited");
+		
+	}
+
+	@Override
+	public void mousePressed(MouseEvent arg0) {
+		System.out.println("mousePressed");
+		
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent arg0) {
+		System.out.println("mouseReleased");
+		
+	}
+
+	@Override
+	public void mouseDragged(MouseEvent arg0) {
+		System.out.println("draging");
+		
+	}
+
+	@Override
+	public void mouseMoved(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+}

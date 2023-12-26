@@ -1,0 +1,14 @@
+package primerosPasos;
+
+import java.util.Scanner;
+
+public class Entrada_I {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner myWindow = new Scanner(System.in);
+		
+		syso
+	}
+
+}

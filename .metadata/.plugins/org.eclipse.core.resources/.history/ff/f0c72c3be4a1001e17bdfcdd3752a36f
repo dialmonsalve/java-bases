@@ -1,0 +1,42 @@
+package gui;
+
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.Toolkit;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class FirstPanel {
+
+	public static void main(String[] args) {
+		
+		MyFrame myFrame = Frame();
+		
+
+	}
+
+}
+
+class MyFrame extends JFrame {
+	public MyFrame() {
+		setTitle("Marco centrado");
+		
+		Toolkit myScreen = Toolkit.getDefaultToolkit();
+		Dimension sizeScreen = myScreen.getScreenSize();
+		int widthScreen = sizeScreen.width;
+		int heightScreen = sizeScreen.height;
+		// setSize(500, 300);
+		// setLocation(500, 300);
+		setBounds(widthScreen/4, heightScreen/4, widthScreen/2,heightScreen/2);
+		
+	}
+}
+
+class Lamina extends JPanel {
+	@Override
+	public void paintComponent(Graphics graf) {
+		super.paintComponent(graf);
+		graf.drawString("Aprendiendo Swing", 100, 100);
+	}
+}

@@ -1,0 +1,68 @@
+package eventos;
+
+import javax.swing.*;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
+import javax.swing.text.Document;
+
+public class EventText {
+
+	public static void main(String[] args) {
+		MyFrameEventText myFrame = new MyFrameEventText();
+
+		myFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
+	}
+
+}
+
+class MyFrameEventText extends JFrame {
+	public MyFrameEventText () {
+		
+		setBounds(200,200,200,200);
+		
+		add(new LayoutText());
+		setVisible(true);
+	}
+}
+
+class LayoutText extends JPanel {
+	
+	private JTextField name;
+	public LayoutText() {
+		
+		name = new JTextField(10);
+
+		
+		TextListener listenertext = new TextListener();
+		
+		Document myDoc = name.getDocument();
+		
+		myDoc.addDocumentListener(listenertext);
+		
+		add(name);
+		
+	}
+	
+	private class TextListener implements DocumentListener {
+
+		@Override
+		public void changedUpdate(DocumentEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void insertUpdate(DocumentEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void removeUpdate(DocumentEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+		
+	}
+}

@@ -1,0 +1,22 @@
+package poo;
+
+public class UsoCoche {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Coche myVehiculo = new Coche();
+		Coche myVehiculo2 = new Coche();
+
+		System.out.println(myVehiculo.getDatosGenerales());
+
+		myVehiculo.setColor("amarillo");
+		m
+		myVehiculo2.setColor("verde");
+
+		System.out.println(myVehiculo.getRuedas());
+		System.out.println(myVehiculo.getColor());
+		System.out.println(myVehiculo2.getColor());
+
+	}
+
+}

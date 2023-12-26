@@ -1,0 +1,21 @@
+package primerosPasos;
+
+public class DeclaracionesOperadores {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		double a = 5;
+		double b;
+		b = 7;
+		
+		double c = a / b;
+		final int d = 8;
+		
+		b.
+		
+		
+		System.out.println(a == b);
+		System.out.println(c);
+	}
+
+}

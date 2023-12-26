@@ -1,0 +1,40 @@
+package eventos;
+
+import javax.swing.*;
+import javax.swing.event.DocumentListener;
+
+public class EventText {
+
+	public static void main(String[] args) {
+		MyFrameEventText myFrame = new MyFrameEventText();
+
+		myFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
+	}
+
+}
+
+class MyFrameEventText extends JFrame {
+	public MyFrameEventText () {
+		
+		add(new LayoutText());
+		setVisible(true);
+	}
+}
+
+class LayoutText extends JPanel {
+	public LayoutText() {
+		
+		JTextField name = new JTextField();
+		
+		
+		
+		
+		
+		
+	}
+	
+	private class TextListener implements DocumentListener {
+		
+	}
+}

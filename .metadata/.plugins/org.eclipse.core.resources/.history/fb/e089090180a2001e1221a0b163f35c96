@@ -1,0 +1,50 @@
+package gui;
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.Toolkit;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+public class EventosI {
+
+	public static void main(String[] args) {
+		MyFrameWhitButtons myFrame = new MyFrameWhitButtons();
+		
+		myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+	}
+
+}
+
+
+class MyFrameWhitButtons extends JFrame {
+	public MyFrameWhitButtons(){
+		setTitle("Botones y eventos");
+		setBounds(400, 200, 500, 300);
+		LayoutWithButtons myLayout = new LayoutWithButtons();
+		
+		add(myLayout);
+		
+		setVisible(true);
+	}		
+}
+
+class LayoutWithButtons extends JPanel {
+	public LayoutWithButtons() {
+		JButton
+	}
+}
+
+
+
+
+
+
+
+
+
+
+

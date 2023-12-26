@@ -1,0 +1,23 @@
+package primerosPasos;
+
+import javax.swing.JOptionPane;
+
+public class AdivinaNumero {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int aleatorio = (int) (Math.random() * 100);
+		int intentos = 0;
+		int numero = 0;
+		
+		do {
+			numero = Integer.parseInt(JOptionPane.showInputDialog("Ingresa el lado"));
+			intentos++;
+			if (numero ) {
+				
+			}
+		} while (numero != aleatorio);
+		System.out.println("El numero es " + aleatorio + " y te demoraste " + intentos + " intentos");
+	}
+
+}

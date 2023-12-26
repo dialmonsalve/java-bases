@@ -1,0 +1,20 @@
+package primerosPasos;
+import javax.swing.JOptionPane;
+import java.util.Scanner;
+
+public class Entrada_I {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner myEntry = new Scanner(System.in);
+		
+		System.out.println("Introduce el nombre: ");
+		String name = myEntry.nextLine();
+		
+		System.out.println("Introduce la edad: ");
+		int age = myEntry.nextInt();
+		
+		System.out.println("Hola " + name + " el próximo año tendrás: " + (age + 1));
+	}
+
+}

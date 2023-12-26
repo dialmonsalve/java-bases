@@ -1,0 +1,18 @@
+package poo;
+
+public class Furgoneta extends Coche {
+	private int capacidadExtra;
+	private int asientosExtra;
+	
+	public Furgoneta(int capacidadExtra, int asientosExtra ) {
+		super();
+		
+		this.capacidadExtra = capacidadExtra;
+		this.asientosExtra = asientosExtra;
+		
+	}
+	
+	public String getDatosFurgoneta() {
+		return "La capacidad de la furgoneta es: " + capacidadExtra;
+	}
+}

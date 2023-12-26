@@ -1,0 +1,30 @@
+package poo;
+
+public class UsoCoche {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Coche myVehiculo = new Coche("pepito");
+		Coche myVehiculo2 = new Coche("Corolan");
+
+		System.out.println(myVehiculo.getDatosGenerales());
+		System.out.println(myVehiculo2.getDatosGenerales());
+
+		myVehiculo.setColor("amarillo");
+		myVehiculo.setConfigurarAsientos("si");
+		myVehiculo.setClimatizador("si");
+
+
+		System.out.println(myVehiculo.getRuedas());
+		System.out.println(myVehiculo.getColor());
+		System.out.println(myVehiculo.getConfigurarAsientos());
+		System.out.println(myVehiculo.getClimatizador());
+		System.out.println(myVehiculo.tellPesoChoche());
+		System.out.println("El precio final del vehículo es " + myVehiculo.precioVehiculo());
+
+		myVehiculo2.setColor("verde");
+		System.out.println(myVehiculo2.getColor());
+
+	}
+
+}

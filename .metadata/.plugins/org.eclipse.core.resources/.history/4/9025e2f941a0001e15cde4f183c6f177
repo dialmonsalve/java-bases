@@ -1,0 +1,19 @@
+package primerosPasos;
+
+public class ManipulaCadenas {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String name = "diego";
+		int ultima_letra = name.length();
+
+		System.out.println(name.length() + " letras");
+		System.out.println(name.charAt(0));
+		System.out.println(name.charAt(ultima_letra - 1));
+		
+		Scanner miobj;
+
+	}
+
+}

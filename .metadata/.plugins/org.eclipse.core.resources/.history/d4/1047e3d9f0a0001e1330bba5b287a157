@@ -1,0 +1,14 @@
+package poo;
+
+public class Furgoneta extends Coche {
+	private int capacidadExtra;
+	private int asientosExtra;
+	
+	public Furgoneta(int capacidadExtra, int asientosExtra ) {
+		super(color);
+		
+		this.capacidadExtra = capacidadExtra;
+		this.asientosExtra = asientosExtra;
+		
+	}
+}

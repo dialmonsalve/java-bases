@@ -1,0 +1,14 @@
+import javax.swing.Timer;
+import 
+
+public class PruebaTemporizador {
+
+	public static void main(String[] args) {
+
+		Timer miTemporizador = new Timer(5000, oyente);
+
+	}
+
+}
+
+interface ActionListener

@@ -1,0 +1,30 @@
+package eventos;
+
+import javax.swing.JFrame;
+
+public class EventKey {
+
+	public static void main(String[] args) {
+		MyFrameEventKey myFrame = new MyFrameEventWindows();
+
+		myFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
+
+	}
+
+}
+
+
+class MyFrameEventKey extends JFrame {
+	public MyFrameEventKey() {
+		setTitle("Botones y eventos");
+		setBounds(400, 200, 500, 300);
+
+		MyWindow windowListener = new MyWindow();
+		addWindowListener(windowListener);
+		addWindowStateListener(windowListener);
+		
+		
+		setVisible(true);
+	}
+}

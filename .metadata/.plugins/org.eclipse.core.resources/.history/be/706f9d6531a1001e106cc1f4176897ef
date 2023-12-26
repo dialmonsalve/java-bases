@@ -1,0 +1,106 @@
+package poo;
+
+import java.util.Date;
+import java.util.GregorianCalendar;
+
+public class Uso_Empleado {
+
+	public static void main(String[] args) {
+
+		Persona[] lasPersonas = new Persona[2];
+
+		lasPersonas[0] = new Empleado("Pepito Perez", 50000, 2009, 02, 25);
+		lasPersonas[1] = new Alumno("Pepito Perez", "Ingeniería");
+
+		for (Persona persona : lasPersonas) {
+			System.out.println(persona.getname() + ", " + persona.getDescription());
+		}
+
+	}
+
+}
+
+abstract class Persona {
+	private String name;
+
+	public Persona(String name) {
+		this.name = name;
+	}
+
+	public String getname() {
+		return this.name;
+	}
+
+	public abstract String getDescription();
+
+}
+
+class Empleado extends Persona {
+
+	private double sueldo;
+	private Date altaContrato;
+	private static int idSiguiente;
+	private int id;
+
+	public Empleado(String name, double sueldo, int year, int month, int day) {
+		super(name);
+		this.sueldo = sueldo;
+		GregorianCalendar calendar = new GregorianCalendar(year, month - 1, day);
+		altaContrato = calendar.getTime();
+		++idSiguiente;
+		id = idSiguiente;
+	}
+
+	public double getSueldo() {
+		return sueldo;
+	}
+
+	public Date getFechaContrato() {
+		return altaContrato;
+	}
+
+	public void upSueldo(double porcentaje) {
+		double aumento = sueldo * porcentaje / 100;
+		sueldo += aumento;
+	}
+
+	@Override
+	public String getDescription() {
+		return "Empleado id:" + id + " con un sueldo de: " + sueldo;
+	}
+
+}
+
+class Alumno extends Persona implements Esta, Comparable<Alumno> {
+	private String carrera;
+	private int nota;
+
+	public Alumno(String name, String car) {
+		super(name);
+		this.carrera = car;
+
+	}
+
+	@Override
+	public String getDescription() {
+		return "El alumno está estudiando " + carrera;
+	}
+
+	@Override
+	public int compareTo(Object alumno) {
+		Alumno otrAlumno = (Alumno)alumno;
+		
+		if(this.nota <otrAlumno.nota ) {
+			return -1;
+		}
+		if(this.nota > otrAlumno.nota) {
+			return 1;
+		}
+		
+		return 0;
+	}
+}
+
+interface Esta{
+	
+}

@@ -1,0 +1,35 @@
+package eventos;
+
+import javax.swing.JFrame;
+
+public class EventKey {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+public class EventWindows {
+
+	public static void main(String[] args) {
+
+
+	}
+
+}
+
+class MyFrameEventWindows extends JFrame {
+	public MyFrameEventWindows() {
+		setTitle("Botones y eventos");
+		setBounds(400, 200, 500, 300);
+
+		MyWindow windowListener = new MyWindow();
+		addWindowListener(windowListener);
+		addWindowStateListener(windowListener);
+		
+		
+		setVisible(true);
+	}
+}

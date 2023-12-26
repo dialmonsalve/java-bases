@@ -1,0 +1,56 @@
+package gui;
+
+import java.awt.BorderLayout;
+
+import javax.swing.*;
+
+
+public class LayoutBorder {
+
+	public static void main(String[] args) {
+		
+		MyFrameWhitButtons3 myFrame = new MyFrameWhitButtons3();
+		
+		myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+	}
+
+}
+
+class MyFrameWhitButtons3 extends JFrame {
+	public MyFrameWhitButtons3() {
+		setTitle("Botones y eventos");
+		setBounds(400, 200, 500, 300);
+		LayoutWithButtons3 myLayout = new LayoutWithButtons3();
+
+		add(myLayout);
+
+		setVisible(true);
+	}
+}
+
+class LayoutWithButtons3 extends JPanel {
+	private JButton btnBlue;
+	private JButton btnRed;
+	private JButton btnYellow;
+	private JTextField name; 
+
+	public LayoutWithButtons3() {
+		setSize(30,250);
+		setLayout(new BorderLayout(10,10));
+		
+		btnBlue = new JButton("Blue");
+		btnRed = new JButton("Red");
+		btnYellow = new JButton("Yellow");
+		name
+
+		add(btnBlue, BorderLayout.NORTH);
+		add(btnYellow, BorderLayout.CENTER);
+		add(btnRed, BorderLayout.SOUTH);
+		
+		add(name, BorderLayout.EAST);
+		
+
+	}
+
+}

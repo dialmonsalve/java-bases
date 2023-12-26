@@ -1,0 +1,19 @@
+package primerosPasos;
+
+import java.util.Iterator;
+
+public class BucleFor {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		for (int i = 0; i < 31; i++) {
+			System.out.println((i + 1));
+			int num = i + 1;
+			if ((15 % num ) == 0) {
+				System.out.println((i + 1) + " - FizzBuzz");
+			}
+
+		}
+	}
+
+}

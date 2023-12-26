@@ -1,0 +1,50 @@
+package primerosPasos;
+
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
+public class Areas {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner myEntry = new Scanner(System.in);
+		String area = JOptionPane.showInputDialog("Elige una opción:\n1. Cuadrado\n2. Rectangulo\n"
+				+ "3. Triangulo\n" + "4. Circulo\n");
+
+		switch (Integer.parseInt(area)) {
+		case 1: {
+			int lado;
+			lado = Integer.parseInt(JOptionPane.showInputDialog("Ingresa el lado"));
+			System.out.println("El área del cuadrado es:" + (lado * lado));
+			break;
+		}
+		case 2: {
+			int base = Integer.parseInt(JOptionPane.showInputDialog("Ingresa la base"));
+			int altura = Integer.parseInt(JOptionPane.showInputDialog("Ingresa la altura"));
+			System.out.println("El área del rectangulo es:" + (base * altura));
+			break;
+		}
+		case 3: {
+			int base = Integer.parseInt(JOptionPane.showInputDialog("Ingresa la base"));
+			int altura = Integer.parseInt(JOptionPane.showInputDialog("Ingresa la altura"));
+			System.out.println("El área del triangulo es:" + ((base * altura) / 2));
+			break;
+		}
+		case 4: {
+			int radio = Integer.parseInt(JOptionPane.showInputDialog("Ingresa el radio"));
+			System.out.println("El área del Circulo es:" + (2 * Math.PI * radio));
+			break;
+		}
+
+		}
+		if (Integer.parseInt(area) == 1) {
+			System.out.println("Elegiste cuadrado");
+		} else if (Integer.parseInt(area) == 2) {
+			System.out.println("Elegiste Rectangulo");
+		} else if (Integer.parseInt(area) == 3) {
+			System.out.println("Elegiste Triangulo");
+		} else {
+			System.out.println("Elegiste Circulo");
+		}
+	}
+}

@@ -1,0 +1,21 @@
+package primerosPasos;
+
+import java.util.Scanner;
+
+public class EvaluaEdad {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner age
+
+		int edad = 18;
+
+		if (edad < 18) {
+			System.out.println("Eres menor de edad");
+		} else if (edad >= 18) {
+			System.out.println("Eres mayot de edad");
+		}
+
+	}
+
+}

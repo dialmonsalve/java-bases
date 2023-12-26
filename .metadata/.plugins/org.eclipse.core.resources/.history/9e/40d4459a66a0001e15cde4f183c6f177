@@ -1,0 +1,15 @@
+package primerosPasos;
+
+public class UsoArrays {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int miMatriz[] = { 8, 7, 4, 7, 5, 9, 5, 4, 8, 6 };
+		int miMatriz2[] = { 8, 7, 4, 7, 5, 9, 5, 4, 8, 6 };
+		
+		for (int i : miMatriz) {
+			System.out.println(i);
+		}
+	}
+
+}
